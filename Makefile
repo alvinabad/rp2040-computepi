@@ -24,7 +24,8 @@
 
 PROGRAM_NAME    = computepi
 
-.PHONY:	all \
+.PHONY:	\
+	compile \
 	help \
 	init \
 	info \
@@ -34,12 +35,13 @@ PROGRAM_NAME    = computepi
 
 help:
 	@echo "Usage:"
-	@echo "    make clean all"
+	@echo "    make clean"
+	@echo "    make compile"
 	@echo "    make info"
 	@echo "    make load"
 	@echo "    make reboot"
 
-all: init
+compile: init
 	cd build && cmake ..
 	cd build && make -j4
 

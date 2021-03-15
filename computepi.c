@@ -32,7 +32,7 @@
 
 int main() {
     int i = 0;
-    double n, pi, realpi;
+    long double n, pi, realpi;
 
     const uint led = PICO_DEFAULT_LED_PIN;
 
@@ -41,20 +41,19 @@ int main() {
 
     stdio_init_all();
 
-    printf("Compute pi\n");
-
+    // get pi using arctangent2 function
     realpi = (16.0 * atan2(1, 5)) - (4.0 * atan2(1, 239));
-    printf("Real Pi: %lf\n", realpi);
-    sleep_ms(10000);
 
     n = 1.0;
     pi = 0;
 
     while (pi < realpi) {
+        /* for debugging
         gpio_put(led, 1);
         sleep_ms(20);
         gpio_put(led, 0);
         sleep_ms(20);
+        */
 
         pi = pi + (4.0/n);
         n += 2.0;
