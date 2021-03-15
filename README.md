@@ -1,5 +1,7 @@
 # rp2040-computepi
-Raspberry Pi Pico Compute Pi in C
+## Happy Pi Day!
+
+Compute for Pi in C using Raspberry Pi Pico Microcontroller
 
 ## Prerequisites
 
